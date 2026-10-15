@@ -1,0 +1,133 @@
+/* Responsive Layout Breakpoints */
+
+/* Mobile First Base is handled in global & components */
+
+/* 320px - 480px Small Mobile */
+@media (max-width: 480px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  .site-container,
+  .site-container-narrow {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section {
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
+  }
+
+  h1 {
+    font-size: 2.15rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card-standard,
+  .card-dark {
+    padding: 1.35rem;
+  }
+}
+
+/* 481px - 767px Large Mobile */
+@media (min-width: 481px) and (max-width: 767px) {
+  .site-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* 768px - 1023px Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .hero-process-line {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+/* 1024px+ Desktop */
+@media (min-width: 1024px) {
+  .mobile-only {
+    display: none !important;
+  }
+
+  .desktop-only {
+    display: block !important;
+  }
+}
+
+/* Up to 1023px Mobile & Tablet (Navbar Drawer) */
+@media (max-width: 1023px) {
+  :root {
+    --header-height: 72px;
+    --total-header-height: 72px;
+  }
+
+  .desktop-only,
+  .top-bar {
+    display: none !important;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex !important;
+  }
+}
+
+/* 1440px - 1920px Large Desktop */
+@media (min-width: 1440px) {
+  :root {
+    --max-content-width: 1320px;
+  }
+
+  .hero-heading {
+    font-size: 4.5rem;
+  }
+}
+
+/* Prevent Horizontal Overflow Globally */
+html, body {
+  max-width: 100vw;
+  overflow-x: clip;
+}

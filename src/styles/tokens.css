@@ -1,0 +1,61 @@
+:root {
+  /* Brand Palette */
+  --color-primary-green: #087A35;
+  --color-deep-forest: #14532D;
+  --color-dark-bg: #0B2E1B;
+  --color-leaf-green: #65A30D;
+  --color-emerald: #10A86B;
+  --color-warm-gold: #E9B83F;
+  --color-warm-gold-hover: #D7A62F;
+  --color-white: #FFFFFF;
+  --color-soft-bg: #F3F8F4;
+  --color-main-text: #26372D;
+  --color-secondary-text: #66756A;
+  --color-muted-text: #8A9A8F;
+  --color-border: #E0E9E2;
+  --color-border-dark: rgba(233, 184, 63, 0.25);
+  
+  /* Surface Variants */
+  --surface-card: #FFFFFF;
+  --surface-card-subtle: #FAFCFA;
+  --surface-forest-gradient: linear-gradient(135deg, #14532D 0%, #0B2E1B 100%);
+  --surface-hero-overlay: linear-gradient(180deg, rgba(11, 46, 27, 0.88) 0%, rgba(20, 83, 45, 0.78) 60%, rgba(11, 46, 27, 0.94) 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(11, 46, 27, 0.06), 0 1px 2px rgba(11, 46, 27, 0.04);
+  --shadow-md: 0 4px 14px rgba(11, 46, 27, 0.08), 0 2px 6px rgba(11, 46, 27, 0.04);
+  --shadow-lg: 0 12px 28px rgba(11, 46, 27, 0.12), 0 4px 10px rgba(11, 46, 27, 0.06);
+  --shadow-xl: 0 20px 40px rgba(11, 46, 27, 0.18);
+  --shadow-gold-glow: 0 0 20px rgba(233, 184, 63, 0.35);
+
+  /* Typography */
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing System */
+  --space-xs: 0.25rem;  /* 4px */
+  --space-sm: 0.5rem;   /* 8px */
+  --space-md: 1rem;     /* 16px */
+  --space-lg: 1.5rem;   /* 24px */
+  --space-xl: 2rem;     /* 32px */
+  --space-2xl: 3rem;    /* 48px */
+  --space-3xl: 4.5rem;  /* 72px */
+  --space-4xl: 6rem;    /* 96px */
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 14px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 450ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Max widths */
+  --max-content-width: 1240px;
+  --header-height: 84px;
+  --total-header-height: 122px;
+}

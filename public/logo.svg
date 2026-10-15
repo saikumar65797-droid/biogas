@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 100" width="480" height="100" fill="none">
+  <!-- Circular Badge -->
+  <g transform="translate(10, 10)">
+    <!-- Outer Rings -->
+    <circle cx="40" cy="40" r="38" stroke="#E9B83F" stroke-width="2.5" fill="#0B2E1B"/>
+    <circle cx="40" cy="40" r="34" stroke="#087A35" stroke-width="1.2" stroke-dasharray="3 1.5" fill="none"/>
+
+    <!-- Golden Sun with Rays -->
+    <g transform="translate(40, 28)">
+      <path d="M0 -14 L0 -19" stroke="#E9B83F" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M9 -9 L13 -13" stroke="#E9B83F" stroke-width="2" stroke-linecap="round"/>
+      <path d="M14 0 L19 0" stroke="#E9B83F" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M-9 -9 L-13 -13" stroke="#E9B83F" stroke-width="2" stroke-linecap="round"/>
+      <path d="M-14 0 L-19 0" stroke="#E9B83F" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M6 -12 L9.5 -16" stroke="#F59E0B" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M-6 -12 L-9.5 -16" stroke="#F59E0B" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="9" fill="url(#sunGradFull)"/>
+    </g>
+
+    <!-- Napier Leaves & Sprout Motif -->
+    <g>
+      <path d="M40 58 C30 53 17 44 21 28 C28 31 35 38 40 48" fill="url(#leafGradFull1)"/>
+      <path d="M40 58 C50 53 63 44 59 28 C52 31 45 38 40 48" fill="url(#leafGradFull2)"/>
+      <path d="M40 60 C38 50 38 37 40 24 C42 37 42 50 40 60" fill="#10A86B"/>
+      <path d="M40 57 L40 66" stroke="#65A30D" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(104, 18)">
+    <!-- Sri Aiswarya Lakshmi -->
+    <text x="0" y="24" font-family="'Manrope', 'Inter', -apple-system, sans-serif" font-size="20" font-weight="800" fill="#14532D" letter-spacing="0.04em">
+      SRI AISWARYA LAKSHMI
+    </text>
+    <!-- Green Energies LLP -->
+    <text x="0" y="46" font-family="'Manrope', 'Inter', -apple-system, sans-serif" font-size="14.5" font-weight="700" fill="#087A35" letter-spacing="0.12em">
+      GREEN ENERGIES LLP
+    </text>
+    <!-- Tagline -->
+    <text x="0" y="66" font-family="'Inter', sans-serif" font-size="11.5" font-weight="500" fill="#E9B83F" letter-spacing="0.06em">
+      Clean Energy. Greener Tomorrow.
+    </text>
+  </g>
+
+  <defs>
+    <linearGradient id="sunGradFull" x1="0" y1="-10" x2="0" y2="10" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="100%" stop-color="#E9B83F"/>
+    </linearGradient>
+    <linearGradient id="leafGradFull1" x1="20" y1="28" x2="40" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#65A30D"/>
+      <stop offset="60%" stop-color="#087A35"/>
+      <stop offset="100%" stop-color="#14532D"/>
+    </linearGradient>
+    <linearGradient id="leafGradFull2" x1="60" y1="28" x2="40" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10A86B"/>
+      <stop offset="60%" stop-color="#087A35"/>
+      <stop offset="100%" stop-color="#0B2E1B"/>
+    </linearGradient>
+  </defs>
+</svg>
