@@ -70,31 +70,32 @@
 .site-logo-link {
   display: inline-flex;
   align-items: center;
+  gap: 0.85rem;
   text-decoration: none;
   flex-shrink: 0;
   transition: transform var(--transition-fast);
 }
 
 .logo-emblem-badge {
-  width: 70px;
-  height: 70px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  background-color: #FFFFFF;
-  border: 2px solid rgba(233, 184, 63, 0.75);
-  box-shadow: 0 4px 14px rgba(8, 122, 53, 0.16), 0 1px 4px rgba(0, 0, 0, 0.06);
+  background-color: #000000;
+  border: 2px solid var(--color-warm-gold, #E9B83F);
+  box-shadow: 0 4px 12px rgba(8, 122, 53, 0.16), 0 0 10px rgba(233, 184, 63, 0.25);
   transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 250ms ease, border-color 250ms ease;
 }
 
 .logo-emblem-badge-dark {
-  width: 96px;
-  height: 96px;
+  width: 68px;
+  height: 68px;
   border: 2.5px solid var(--color-warm-gold, #E9B83F);
-  box-shadow: 0 0 24px rgba(233, 184, 63, 0.5), 0 6px 18px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 20px rgba(233, 184, 63, 0.4), 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 
 .logo-emblem-img {
@@ -102,13 +103,61 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: scale(1.02);
+}
+
+/* Brand Text Group (To the right of the logo emblem) */
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.25;
+}
+
+.logo-light .logo-name-primary {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0B2E1B;
+  letter-spacing: -0.015em;
+  transition: color var(--transition-fast);
+}
+
+.logo-light .logo-name-secondary {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--color-primary-green, #087A35);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.site-logo-link:hover .logo-name-primary {
+  color: var(--color-primary-green, #087A35);
+}
+
+.logo-dark .logo-name-primary {
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+.logo-dark .logo-name-secondary {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-warm-gold, #E9B83F);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 3px;
 }
 
 /* Hover Micro-Interactions */
 .site-logo-link:hover .logo-emblem-badge {
   transform: scale(1.06) rotate(1.5deg);
-  box-shadow: 0 6px 20px rgba(8, 122, 53, 0.28), 0 0 14px rgba(233, 184, 63, 0.45);
+  box-shadow: 0 6px 20px rgba(8, 122, 53, 0.28), 0 0 16px rgba(233, 184, 63, 0.45);
   border-color: var(--color-warm-gold, #E9B83F);
 }
 
@@ -119,27 +168,53 @@
 
 /* Sizing Modifiers */
 .logo-size-small .logo-emblem-badge {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
+}
+
+.logo-size-small .logo-name-primary {
+  font-size: 0.92rem;
+}
+
+.logo-size-small .logo-name-secondary {
+  font-size: 0.7rem;
 }
 
 .logo-size-large .logo-emblem-badge {
-  width: 96px;
-  height: 96px;
+  width: 68px;
+  height: 68px;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .site-logo-link {
+    gap: 0.65rem;
+  }
   .logo-emblem-badge {
-    width: 56px;
-    height: 56px;
+    width: 46px;
+    height: 46px;
+  }
+  .logo-light .logo-name-primary {
+    font-size: 0.94rem;
+  }
+  .logo-light .logo-name-secondary {
+    font-size: 0.7rem;
   }
 }
 
 @media (max-width: 480px) {
+  .site-logo-link {
+    gap: 0.5rem;
+  }
   .logo-emblem-badge {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
+  }
+  .logo-light .logo-name-primary {
+    font-size: 0.84rem;
+  }
+  .logo-light .logo-name-secondary {
+    font-size: 0.64rem;
   }
 }
 
