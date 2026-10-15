@@ -97,11 +97,12 @@ app.post('/api/contact', (req, res) => {
 if (fs.existsSync(distPath)) {
   app.use(express.static(distPath));
 
-  app.get('*', (req, res, next) => {
-    if (req.path.startsWith('/api')) {
-      return next();
+  // Catch-all route for SPA navigation in Express 5
+  app.use((req, res, next) => {
+    if (req.method === 'GET' && !req.path.startsWith('/api')) {
+      return res.sendFile(path.join(distPath, 'index.html'));
     }
-    res.sendFile(path.join(distPath, 'index.html'));
+    next();
   });
 }
 
