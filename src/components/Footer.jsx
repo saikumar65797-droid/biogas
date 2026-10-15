@@ -137,6 +137,19 @@ export default function Footer() {
             <Link to="/contact">Farmer Partnership Desk</Link>
           </div>
         </div>
+
+        {/* Developer Attribution Credit */}
+        <div className="footer-developer-credit">
+          Design &amp; Developed by{' '}
+          <a
+            href="https://saanvikasolutions.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="developer-credit-link"
+          >
+            Saanvika Software Solutions
+          </a>
+        </div>
       </div>
     </footer>
   );
