@@ -1,5 +1,12 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const distPath = path.resolve(__dirname, '../dist');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -85,6 +92,18 @@ app.post('/api/contact', (req, res) => {
     leadId: `LEAD-${Date.now()}`
   });
 });
+
+// Serve frontend static assets if dist exists (Render / production)
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+}
 
 app.listen(PORT, () => {
   console.log(`Sri Aiswarya Lakshmi Green Energies API running on port ${PORT}`);

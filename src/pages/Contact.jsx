@@ -79,7 +79,11 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const endpoint = (typeof window !== 'undefined' && window.location.hostname === 'localhost' && window.location.port === '5173')
+        ? 'http://localhost:5000/api/contact'
+        : '/api/contact';
+
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
