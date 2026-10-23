@@ -568,6 +568,69 @@
   color: var(--color-primary-green);
 }
 
+/* Interactive Step Switcher on Process Page */
+.process-switcher-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 2.5rem;
+}
+
+.process-switcher-btn {
+  padding: 1.25rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  border-top: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+  transition: all var(--transition-fast);
+  width: 100%;
+}
+
+.process-switcher-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary-green);
+}
+
+.process-switcher-btn.active {
+  border-color: var(--color-primary-green) !important;
+  background-color: var(--color-soft-bg) !important;
+  border-top: 4px solid var(--color-warm-gold) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.process-highlight-box {
+  padding: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .process-switcher-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-switcher-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .process-switcher-btn {
+    padding: 1rem 1.15rem;
+  }
+
+  .process-highlight-box {
+    padding: 1.35rem;
+  }
+
+  .process-card {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.35rem;
+  }
+}
+
 /* Horizontal Flow Cards on Home Page */
 .process-flow-grid {
   display: grid;

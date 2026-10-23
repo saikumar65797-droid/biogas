@@ -134,8 +134,8 @@ export default function Process() {
             subtitle="Click on any stage below to inspect its chemical, mechanical, and operational parameters."
           />
 
-          {/* Interactive Step Switcher for Desktop */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '0.85rem', marginBottom: '2.5rem' }}>
+          {/* Interactive Step Switcher */}
+          <div className="process-switcher-grid">
             {processSteps.map((s, idx) => {
               const IconComp = s.icon;
               const isActive = activeStep === idx;
@@ -144,16 +144,7 @@ export default function Process() {
                   key={idx}
                   type="button"
                   onClick={() => setActiveStep(idx)}
-                  className="card-standard"
-                  style={{
-                    padding: '1.25rem 1rem',
-                    textAlign: 'left',
-                    cursor: 'pointer',
-                    borderColor: isActive ? 'var(--color-primary-green)' : 'var(--color-border)',
-                    backgroundColor: isActive ? 'var(--color-soft-bg)' : '#FFFFFF',
-                    borderTop: isActive ? '4px solid var(--color-warm-gold)' : '1px solid var(--color-border)',
-                    transition: 'all var(--transition-fast)'
-                  }}
+                  className={`card-standard process-switcher-btn ${isActive ? 'active' : ''}`}
                   aria-pressed={isActive}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.65rem' }}>
@@ -172,7 +163,7 @@ export default function Process() {
 
           {/* Detailed Highlight Box for Active Step */}
           {processSteps[activeStep] && (
-            <div className="card-standard" style={{ padding: '2.5rem', border: '1.5px solid var(--color-primary-green)', background: '#FFFFFF', boxShadow: 'var(--shadow-lg)' }}>
+            <div className="card-standard process-highlight-box" style={{ border: '1.5px solid var(--color-primary-green)', background: '#FFFFFF', boxShadow: 'var(--shadow-lg)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', borderBottom: '1px solid var(--color-border)', paddingBottom: '1.5rem', marginBottom: '1.5rem' }}>
                 <div>
                   <span className="badge-pill" style={{ marginBottom: '0.5rem' }}>
