@@ -46,7 +46,7 @@ export default function Home() {
             <span className="hero-process-arrow">→</span>
             <span className="hero-process-step">Biogas</span>
             <span className="hero-process-arrow">→</span>
-            <span className="hero-process-step" style={{ color: 'var(--color-white)' }}>Clean Energy</span>
+            <span className="hero-process-step">Clean Energy</span>
           </div>
 
           <h1 className="hero-heading">

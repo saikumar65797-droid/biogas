@@ -440,6 +440,8 @@
   font-weight: 600;
   color: #F3F8F4;
   backdrop-filter: blur(8px);
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 .hero-process-step {
@@ -572,6 +574,20 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   position: relative;
+}
+
+@media (max-width: 1024px) {
+  .process-flow-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-flow-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
 }
 
 .process-flow-card {
